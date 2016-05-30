@@ -101,6 +101,8 @@ public class DiscrollViewContent extends LinearLayout {
             mDiscrollveScaleY = typedArray.getBoolean(R.styleable.DiscrollView_LayoutParams_discrollve_scaleY, false);
             //【思考】为什么默认值要设定为-1？有什么特殊含义？这是一个细节问题！！todo
             mDiscrollveTranslation = typedArray.getInt(R.styleable.DiscrollView_LayoutParams_discrollve_translation,-1);
+            mDiscrollveFromBgColor = typedArray.getInt(R.styleable.DiscrollView_LayoutParams_discrollve_fromBgColor,-1);
+            mDiscrollveToBgColor = typedArray.getInt(R.styleable.DiscrollView_LayoutParams_discrollve_toBgColor,-1);
         }
     }
 
