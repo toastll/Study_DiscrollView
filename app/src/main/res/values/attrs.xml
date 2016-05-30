@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--attr: 【属性】-->
+    <!--属性说明：declare-styleable声明可用样式，在 为自定义控件设置自定义属性 时会用到-->
+    <!--属性说明：formate【格式】在此处为定义name="discrollve_alpha" 值所需的类型。
+                可参照变量定义进行理解：如 int test; 则test为name,int为format-->
+    <declare-styleable name="DiscrollView_LayoutParams">
+        <attr name="test" format="string"/>
+        <attr name="discrollve_alpha" format="boolean"/>
+        <attr name="discrollve_scaleX" format="boolean"/><!--scale缩放动画-->
+        <attr name="discrollve_scaleY" format="boolean"/><!--是否需要Y方向的缩放动画-->
+        <attr name="discrollve_fromBgColor" format="color"/><!--起始的背景颜色-->
+        <attr name="discrollve_toBgColor" format="color"/><!--结束的背景颜色-->
+        <attr name="discrollve_translation"/><!--位移动画， 枚举-->
+        <!--含有format代表声明属性， 不含有format代表使用定义好了的属性如
+            <attr name="android:text"/>就代表了使用系统定义好了的text属性，可参照TextView中的text属性
+        -->
+    </declare-styleable>
+    <!--<attr name="discrollve_translation" />&lt;!&ndash;位移动画， 枚举&ndash;&gt;-->
+
+
+    <!--上方的translation是怎么与这个产生链接的呢？-->
+    <attr name="discrollve_translation">
+        <flag name="fromTop" value="0x01"/><!--0x01 十六进制表示的1-->
+        <flag name="fromBottom" value="0x02"/><!--十六进制表示的2-->
+        <flag name="fromLeft" value="0x04"/><!--十六进制表示的4-->
+        <flag name="fromRight" value="0x08"/><!--十六进制表示的8-->
+        <!--1   0001
+            2   0010
+            4   0100
+            8   1000-->
+    </attr>
+</resources>

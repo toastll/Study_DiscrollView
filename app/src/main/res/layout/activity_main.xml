@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dn.pluto.study_discrollview.DiscrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:discrollve="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--在运行时，会默默的在DiscrollViewContent的每一个子控件的外围包裹上一层ViewGroup
+        也就是说这是DiscrollViewContent需要进行的操作，所以会在DiscrollViewContent里面进行-->
+    <com.dn.pluto.study_discrollview.DiscrollViewContent
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="@android:color/white"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="神撒谎的疯狂就哈萨克的减肥哈开始叫对方还看见凤凰卡机的复活节卡萨丁回复看见爱上还是打开就发货"
+            android:textSize="25sp"
+            android:visibility="gone" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#007788"
+            discrollve:discrollve_alpha="true"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            discrollve:discrollve_alpha="true"
+            discrollve:discrollve_translation="fromLeft|fromBottom"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#e2d7d7"
+            discrollve:discrollve_alpha="true"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            discrollve:discrollve_alpha="true"
+            discrollve:discrollve_translation="fromRight|fromBottom"
+            discrollve:discrollve_scaleX="true"
+            discrollve:discrollve_scaleY="true"
+            android:src="@mipmap/ic_launcher"
+            />
+
+    </com.dn.pluto.study_discrollview.DiscrollViewContent>
+
+</com.dn.pluto.study_discrollview.DiscrollView>
